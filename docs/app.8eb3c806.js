@@ -164,12 +164,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":24}],6:[function(require,module,exports) {
+},{"./bundle-url":24}],18:[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/fontello.eot":[["fontello.c81903e2.eot",35],35],"./../font/fontello.woff2":[["fontello.1fa8e8f9.woff2",36],36],"./../font/fontello.woff":[["fontello.e2a0350b.woff",37],37],"./../font/fontello.ttf":[["fontello.a45f59b0.ttf",38],38],"./../font/fontello.svg":[["fontello.f9459440.svg",39],39],"./../img/play.svg":[["play.7064fab0.svg",40],40],"_css_loader":41}],20:[function(require,module,exports) {
+},{"./../font/fontello.eot":[["fontello.c81903e2.eot",35],35],"./../font/fontello.woff2":[["fontello.1fa8e8f9.woff2",36],36],"./../font/fontello.woff":[["fontello.e2a0350b.woff",37],37],"./../font/fontello.ttf":[["fontello.a45f59b0.ttf",38],38],"./../font/fontello.svg":[["fontello.f9459440.svg",39],39],"./../img/play.svg":[["play.7064fab0.svg",40],40],"_css_loader":41}],19:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -338,12 +338,13 @@ function initiateScrolling() {
         top = _target$getBoundingCl.top;
 
     var currentTop = window.pageYOffset;
-    var step = (top - currentTop) / 50;
+    var scrollTo = top + currentTop;
+    var step = scrollTo / 50;
     var animate = function animate() {
       currentTop += step;
       window.scrollTo(0, currentTop);
 
-      if (currentTop < top) {
+      if (currentTop < scrollTo) {
         requestAnimationFrame(animate);
       } else {
         location.hash = selector;
@@ -355,7 +356,7 @@ function initiateScrolling() {
 }
 
 main();
-},{"../css/style.scss":6,"_bundle_loader":20,"whatwg-fetch":[["fetch.e0928639.js",21],"fetch.e0928639.map",21]}],17:[function(require,module,exports) {
+},{"../css/style.scss":18,"_bundle_loader":19,"whatwg-fetch":[["fetch.e0928639.js",20],"fetch.e0928639.map",20]}],42:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -384,7 +385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '33735' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '36867' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -547,6 +548,6 @@ module.exports = function loadJSBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require(20);b.register("js",require(43));
-},{}]},{},[17,0,10], null)
+var b=require(19);b.register("js",require(43));
+},{}]},{},[42,0,10], null)
 //# sourceMappingURL=/app.8eb3c806.map

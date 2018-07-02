@@ -80,12 +80,13 @@ function initiateScrolling() {
     const target = document.querySelector(selector)
     const { top } = target.getBoundingClientRect()
     let currentTop = window.pageYOffset
-    const step = (top - currentTop) / 50
+    const scrollTo = top + currentTop
+    const step = scrollTo / 50
     const animate = () => {
       currentTop += step
       window.scrollTo(0, currentTop)
 
-      if (currentTop < top) {
+      if (currentTop < scrollTo) {
         requestAnimationFrame(animate)
       } else {
         location.hash = selector
