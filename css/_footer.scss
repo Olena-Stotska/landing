@@ -1,0 +1,38 @@
+footer {
+  padding: 80px 0 60px 0;
+  text-align: center;
+  background-color: map-get($colors, primary);
+
+  .social-title {
+    span {
+      font-size: 2rem;
+      color: #020151;
+      background-color: #fff;
+      padding: 20px 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  .icons-block {
+    max-width: 80%;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      margin: 90px 0 100px 0;
+    }
+
+    i {
+      color: #fff;
+      font-size: 6rem;
+    }
+  }
+
+  .copyright {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}

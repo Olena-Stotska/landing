@@ -169,11 +169,11 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":10}],4:[function(require,module,exports) {
+},{"./../font/fontello.eot":[["fontello.c81903e2.eot",42],42],"./../font/fontello.woff2":[["fontello.1fa8e8f9.woff2",43],43],"./../font/fontello.woff":[["fontello.e2a0350b.woff",44],44],"./../font/fontello.ttf":[["fontello.a45f59b0.ttf",45],45],"./../font/fontello.svg":[["fontello.f9459440.svg",46],46],"./../img/play.svg":[["play.7064fab0.svg",33],33],"_css_loader":10}],4:[function(require,module,exports) {
 'use strict';
 
 require('./css/style.scss');
-},{"./css/style.scss":6}],12:[function(require,module,exports) {
+},{"./css/style.scss":6}],31:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -202,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '43827' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '40783' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -343,5 +343,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[12,4], null)
+},{}]},{},[31,4], null)
 //# sourceMappingURL=/trainee.69d48665.map
