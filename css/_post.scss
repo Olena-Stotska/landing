@@ -1,68 +1,116 @@
-.post {
-  margin-top: 140px;
-}
-
 .img-post {
+  width: 100%;
+
   img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 8px;
   }
 }
 
 .timeline {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
-  padding: 80px 0 80px 100px;
+  padding: 40px 0 20px 30px;
   position: relative;
   border-left: 1px solid map-get($colors, timeline);
   color: map-get($colors, primary);
 
   .date {
-    width: 90px;
-    left: -45px;
-    top: 75px;
+    width: 40px;
+    left: -20px;
+    top: 35px;
     position: absolute;
     padding: 5px;
     font-weight: 900;
     text-align: center;
     background-color: #fff;
     color: map-get($colors, date);
-    font-size: 3rem;
+    text-transform: uppercase;
   }
 
   .title-post {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 900;
   }
 
   .text-post {
-    font-size: 2.5rem;
-    margin: 80px 0 90px 0;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin: 20px 0 30px 0;
   }
 
   .video-block {
     position: relative;
 
-    video {
-      max-width: 100%;
+    &.hide {
+      .btn-play {
+        display: none;
+      }
     }
 
-    .btn-play-pause {
-      width: 120px;
-      height: 120px;
+    video {
+      width: 100%;
+      object-fit: cover;
+
+      &::-webkit-media-controls-start-playback-button {
+        display: none;
+        -webkit-appearance: none;
+      }
+    }
+
+    .btn-play {
+      width: 80px;
+      height: 80px;
       position: absolute;
       z-index: 3;
       left: 50%;
-      margin-left: -60px;
+      margin-left: -40px;
       top: 50%;
-      margin-top: -100px;
+      margin-top: -40px;
       outline: none;
       border: none;
       cursor: pointer;
       transition: all .3s ease;
       background-image: url('../img/play.svg');
-      background-size: 120px 120px;
+      background-size: 80px 80px;
       background-color: transparent;
     }
   }
 }
+
+@media (min-width: #{map-get($breakpoints, small)}) {
+  .timeline {
+    width: 80%;
+    padding: 40px 0 20px 50px;
+  }
+}
+
+@media (min-width: #{map-get($breakpoints, large)}) {
+  .timeline {
+    width: 60%;
+    padding: 80px 0 160px 100px;
+
+    .date {
+      top: 85px;
+    }
+
+    .title-post {
+      font-size: 3rem;
+    }
+
+    .text-post {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      margin: 70px 0 80px 0;
+    }
+
+    .video-block {
+
+      video {
+        max-width: 100%;
+        max-height: 600px;
+      }
+    }
+  }
+}
+

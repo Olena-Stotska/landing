@@ -2,6 +2,9 @@
 <html>
 <head>
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="img/bage.png" type="image/x-icon" />
 </head>
 <body>
   <section class="header">
@@ -13,26 +16,11 @@
       <div><span>volgens nu.nl</span></div>
     </div>
     <div class="scroll">
-      <a href="#somewhere"><span></span>Scroll om te lezen</a>
+      <a href="#container" id="scroll-btn"><span></span>Scroll om te lezen</a>
     </div>
   </section>
 
-  <template id="post-container">
-    <section id="description" class="post" data-attr=":id">
-      <div class="img-post" data-attr="img-post"><img data-attr="img:src"></div>
-      <div class="timeline">
-        <div class="date" data-attr="data"></div>
-        <h1 class="title-post"  data-attr="title-post"></h1>
-        <p class="text-post" data-attr="text-post"></p>
-        <div class="video-block" data-attr="video">
-          <video muted src="https://youtu.be/Z_4TlZCvYL4" poster="img/03.jpg">
-              Sorry, your browser doesn't support embedded videos.
-          </video>
-          <button class="btn-play-pause"></button>
-        </div>
-      </div>
-    </section>
-  </template>
+  <main id="container"></main>
 
   <footer>
     <div class="social-title"><span>deel op social media</span></div>
@@ -53,8 +41,25 @@
       </ul>
     </div>
 
-    <span class="copyright">Copyright2018</span>
+    <span class="copyright">Copyright 2018</span>
   </footer>
+
+  <template id="post-container">
+    <section class="post">
+      <div class="img-post"><img data-bind="img:src"></div>
+      <div class="timeline">
+        <div class="date" data-bind="date"></div>
+        <h1 class="title-post" data-bind="title"></h1>
+        <p class="text-post" data-bind="description"></p>
+        <div class="video-block">
+          <video data-bind="video:src,img:poster">
+              Sorry, your browser doesn't support embedded videos.
+          </video>
+          <button type="button" class="btn-play" name="play"></button>
+        </div>
+      </div>
+    </section>
+  </template>
 
   <script src="index.js"></script>
 </body>
