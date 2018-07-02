@@ -1,5 +1,8 @@
-import './css/style.scss'
-import 'whatwg-fetch'
+import '../css/style.scss'
+
+if (typeof window.fetch !== 'function') {
+  import('whatwg-fetch')
+}
 
 function main() {
   playVideo()
