@@ -173,7 +173,7 @@ module.hot.accept(reloadCSS);
 'use strict';
 
 require('./css/style.scss');
-},{"./css/style.scss":6}],14:[function(require,module,exports) {
+},{"./css/style.scss":6}],12:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -202,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '44329' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '43827' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -343,5 +343,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[14,4], null)
+},{}]},{},[12,4], null)
 //# sourceMappingURL=/trainee.69d48665.map

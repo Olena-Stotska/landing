@@ -1,0 +1,81 @@
+.logo {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  position: relative;
+  margin: 120px auto 80px auto;
+  background-color: map-get($colors, primary);
+  box-shadow: -2px -2px 15px rgba(2, 1, 81, 0.5);
+
+  img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: 55px;
+  }
+}
+
+.year {
+  text-align: center;
+}
+
+.title-header {
+  text-align: center;
+  margin: 80px auto 185px auto;
+
+  div {
+    margin-bottom: 40px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 3rem;
+    padding: 20px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: map-get($colors, primary);
+  }
+}
+
+.scroll {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+
+  a {
+    color: map-get($colors, primary);
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    &:active {
+      text-decoration: none;
+      color: map-get($colors, scroll);
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border-radius: 50%;
+    border: 1px solid map-get($colors, primary);
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid map-get($colors, primary);
+      border-bottom: 1px solid map-get($colors, primary);
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    }
+  }
+}
