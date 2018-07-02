@@ -2,6 +2,8 @@ import './css/style.scss'
 import 'whatwg-fetch'
 
 function main() {
+  playVideo()
+
   return getArticles()
     .then(renderArticles)
     .catch(error => {
@@ -42,6 +44,26 @@ function render(element, obj) {
   })
 
   return element
+}
+
+function playVideo() {
+  document.addEventListener('click', (event) => {
+    const target = event.target
+
+    if (target.name === 'play') {
+      const video = target.parentNode.querySelector('video')
+      const showButton = (event) => {
+        video.removeEventListener(event.type, showButton)
+        target.parentNode.classList.remove('hide')
+        video.pause()
+      }
+
+      target.parentNode.classList.add('hide')
+      video.play()
+      video.addEventListener('pause', showButton)
+      video.addEventListener('click', showButton)
+    }
+  })
 }
 
 main()
