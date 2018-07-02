@@ -1,0 +1,26 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "parcel": "^1.9.4"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olena-Stotska/levi9-landing.git"
+  },
+  "author": "Olena Stotska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olena-Stotska/levi9-landing/issues"
+  },
+  "homepage": "https://github.com/Olena-Stotska/levi9-landing#readme"
+}
