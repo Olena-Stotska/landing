@@ -3,6 +3,7 @@ import 'whatwg-fetch'
 
 function main() {
   playVideo()
+  initiateScrolling()
 
   return getArticles()
     .then(renderArticles)
@@ -63,6 +64,32 @@ function playVideo() {
       video.addEventListener('pause', showButton)
       video.addEventListener('click', showButton)
     }
+  })
+}
+
+function initiateScrolling() {
+  const button = document.getElementById('scroll-btn')
+
+  button.addEventListener('click', (event) => {
+    event.preventDefault()
+
+    const selector = button.getAttribute('href')
+    const target = document.querySelector(selector)
+    const { top } = target.getBoundingClientRect()
+    let currentTop = window.pageYOffset
+    const step = (top - currentTop) / 50
+    const animate = () => {
+      currentTop += step
+      window.scrollTo(0, currentTop)
+
+      if (currentTop < top) {
+        requestAnimationFrame(animate)
+      } else {
+        location.hash = selector
+      }
+    }
+
+    animate()
   })
 }
 
